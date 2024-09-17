@@ -84,3 +84,19 @@ $python manage.py startapp users
  Django에게 나의 user model을 사용하고 싶다고 알려야함
 
 기존의 User을 커스텀 User로 바꾸려면 DB 삭제 & 마이그레이션 파일 모두 삭제
+> superuser 다시 만들어야함!
+
+### 5.2 : Custom Fields
+last, first name fields를 사용 안할거임 > editable = False
+***Django source code 조작 노노! > overriding
+
+새로운 사용자를 만들 때 email을 받아서 email, username으로 지정
+
+**model을 수정할 때마다 makemigrations&migrate 
+-> Python Model Structure과 DB의 구조를 서로 동기화한다.
+ 
+
+ non-nullable field > cannot be null
+ 우리 DB는 이미 user을 가지고 있어.
+ > 기존 user에 is_host에 담을 기본값이 필요해! 기존 사용자 어쩔거여?
+ 
