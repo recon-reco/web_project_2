@@ -29,4 +29,5 @@ class CustomUserAdmin(UserAdmin):
     )
     #fields =("email", "password", "name")
 
-    list_display = ("username", "email","name","is_host")
+    list_display = ("username", "email","name","is_host") #col of admin user list
+    

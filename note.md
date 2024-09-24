@@ -1,3 +1,17 @@
+### github 
+```
+$git remote add origin https://github.com/recon-reco/your-repo.git
+$git remote -v
+$git branch
+$git branch -m master main
+#git fetch origin main // 리모트 저장소의 main 브랜치에서 변경사항을 로컬로 가져옴
+$git push -u origin main
+
+$git push origin main --force ***리모트 브랜치의 모든 커밋 내역을 덮어씁니다, 따라서 리모트의 커밋 기록이 중요하지 않을 때만 사용해야 합니다.
+```
+
+
+
 $poetry add django : 가상환경에 django 추가
 pyproject.toml : 가상환경에 대한 정보가 담겨있음
 
@@ -78,7 +92,7 @@ class HouseAdmin(admin.ModelAdmin): 이 클래스는 admin.ModelAdmin 클래스�
 2. 우리만의 사용자 모델로 교체하지만 Django의 장점은 가져오는 방법
 
 $python manage.py startapp users
- > users/models.pu
+ > users/models.py
  > settings.py 앱 등록
 
  Django에게 나의 user model을 사용하고 싶다고 알려야함
@@ -99,4 +113,8 @@ last, first name fields를 사용 안할거임 > editable = False
  non-nullable field > cannot be null
  우리 DB는 이미 user을 가지고 있어.
  > 기존 user에 is_host에 담을 기본값이 필요해! 기존 사용자 어쩔거여?
+ 
+
+ PK <- 자동으로 생성한다. DB 안의 모든 객체에 부여함
+사용자가 지워져도 
  
